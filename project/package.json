@@ -1,0 +1,31 @@
+{
+  "name": "ngx-material-popover",
+  "description": "angular material multiselect popover",
+  "version": "1.0.2",
+  "homepage": "https://github.com/michaelrast/ngx-material-popover",
+  "license": "MIT",
+  "author": {
+    "name": "Michael Rast"
+  },
+  "publishConfig": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelrast/ngx-material-popover"
+  },
+  "bugs": {
+    "url": "https://github.com/michaelrast/ngx-material-popover/issues"
+  },
+  "keywords": [
+    "angular",
+    "popover"
+  ],
+  "peerDependencies": {
+    "@angular/cdk": "^13.0.0",
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0",
+    "@angular/material": "^13.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
