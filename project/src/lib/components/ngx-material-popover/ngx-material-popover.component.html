@@ -1,4 +1,4 @@
-<mat-menu #popover [xPosition]="xPosition" [yPosition]="yPosition" class="ngx-mat-popover" [hasBackdrop]="!clickOutToClose">
+<mat-menu #popover [xPosition]="xPosition" [yPosition]="yPosition" class="ngx-mat-popover" [hasBackdrop]="clickOutToClose">
   <ng-template matMenuContent>
     <span mat-menu-item [disableRipple]="true"
       (keydown.tab)="$event.stopPropagation()"
@@ -12,6 +12,6 @@
   </ng-template>
 </mat-menu>
 
-<div [ngxMatMenuTriggerFor]="popover" #trigger="ngxMatMenuTrigger">
+<div [ngxMatMenuTriggerFor]="popover" #trigger="ngxMatMenuTrigger" (menuClosed)="menuClosed()">
   <ng-content></ng-content>
 </div>

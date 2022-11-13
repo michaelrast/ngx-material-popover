@@ -1,17 +1,13 @@
 <ngx-material-popover [popoverContent]="popoverContent" [clickOutToClose]="true" [xPosition]="xPosition"
-  [yPosition]="yPosition" #popover="ngxMaterialPopover" mode="toggle">
-  <button mat-button data-cy="button">Need a popover?</button>
+  [yPosition]="yPosition" [clickOutToClose]="true" (onClose)="popoverClosed($event)" #popover="ngxMaterialPopover"
+  mode="toggle">
+  <button mat-raised-button data-cy="button">Popover Example</button>
 </ngx-material-popover>
 
 <ng-template #popoverContent>
-  <div class="title">This is a popover missing from angular/material</div>
-  <div class="content" data-cy="popover">
-    This popover is pretty simple. It uses material menu to work like a popover.<br />
-    The benefit of this approach is it is super lightweigt.<br /><br />
-    And it is very flexible as well.
-  </div>
-  <div class="action">
+  <p>Popover content</p>
+  <div class="footer">
     <button mat-button (click)="onClose()">close</button>
-    <button mat-raised-button color="accent" (click)="onConfirm()" data-cy="button-close-popover">CONFIRM</button>
+    <button mat-raised-button color="accent" (click)="onConfirm()" data-cy="button-close-popover">OK</button>
   </div>
 </ng-template>

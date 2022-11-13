@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { MenuPositionX, MenuPositionY } from '@angular/material/menu';
 import { NgxMatMenuTriggerDirective } from '../../directives/ngx-mat-menu-trigger.directive';
 
@@ -16,6 +16,7 @@ export class NgxMaterialPopoverComponent implements OnInit {
   @Input() yPosition: MenuPositionY = 'below';
   @Input() popoverContent!: TemplateRef<unknown>;
   @Input() mode: 'toggle' | 'hover' = 'toggle';
+  @Output() onClose = new EventEmitter();
 
   @ViewChild(NgxMatMenuTriggerDirective, { static: true })
   private readonly ngxMatMenuTrigger!: NgxMatMenuTriggerDirective;
@@ -37,5 +38,9 @@ export class NgxMaterialPopoverComponent implements OnInit {
 
   close(): void {
     this.ngxMatMenuTrigger.closeMenu();
+  }
+
+  menuClosed() {
+    this.onClose.emit();
   }
 }

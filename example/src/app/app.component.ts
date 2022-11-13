@@ -29,4 +29,9 @@ export class AppComponent {
   openPopover(): void {
     this.popover.open();
   }
+
+  popoverClosed(event: any) {
+    console.log(event);
+    alert('closed');
+  }
 }
