@@ -1,7 +1,7 @@
 {
   "name": "ngx-material-popover",
   "description": "angular material popover",
-  "version": "1.0.10",
+  "version": "1.0.14",
   "homepage": "https://github.com/michaelrast/ngx-material-popover",
   "license": "MIT",
   "author": {
@@ -26,13 +26,7 @@
     "angular",
     "popover"
   ],
-  "peerDependencies": {
-    "@angular/cdk": "^14.2.7",
-    "@angular/common": "^14.2.10",
-    "@angular/core": "^14.2.10",
-    "@angular/material": "^14.2.7"
-  },
   "dependencies": {
-    "tslib": "^2.4.1"
+    "tslib": "1.x - 2.x"
   }
 }
