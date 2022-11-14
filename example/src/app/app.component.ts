@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgxMaterialPopoverComponent } from '../../../project/src/public-api';
+import { NgxMaterialPopoverComponent } from 'ngx-material-popover';
 import { MenuPositionX, MenuPositionY } from '@angular/material/menu';
 
 @Component({
